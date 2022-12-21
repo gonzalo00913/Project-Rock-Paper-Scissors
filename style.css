@@ -1,0 +1,20 @@
+body{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    color: #333;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button img {
+    width: 100px;
+    height: 100px;
+}
