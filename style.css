@@ -1,20 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+   
+}
 body{
-    font-family: sans-serif;
-    text-align: center;
+    background-color: bisque;
+}
+
+
+
+.container{
+    max-width: 400px;
+    height: 100vh;
+    margin: 0 auto;
+    max-height: 745px;
+    background-color: rgb(216, 74, 74);
+    border: 5px solid black;
+    border-radius: 11px;
+}
+
+#puntos{
+    height: 60vh;
+}
+#botones {
+    display: flex;
+    width: 100px;
+}
+
+#botones,
+button,
+img{
+    width: 100%;
+    background-color: transparent;
+    border-color: transparent;
 }
 
 h1{
     text-align: center;
-    color: #333;
+    font-size: 35px;
+    color: rgb(0, 0, 0);
+    padding: 25px;
 }
 
-button{
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+#texto-inicio{
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
 }
 
-button img {
-    width: 100px;
-    height: 100px;
+footer{
+    text-align: center;
+    padding: 10px;
+    
 }
