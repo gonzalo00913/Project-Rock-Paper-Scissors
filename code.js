@@ -10,100 +10,56 @@ function choiceComputer() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  let result;
   if (playerSelection === computerSelection) {
-    result = "Empate!";
+    return "Empate!";
   } else if (playerSelection === "Piedra") {
-    if (computerSelection === "Tijeras") {
-      result = "¡Ganaste!";
-      playerScore++;
+    if (computerSelection === "tijeras") {
+      return "Gana! Piedra vence a tijeras.";
     } else {
-      result = "!Pierdes!";
-      computerScore++
+      return "Pierde! Papel vence a piedra.";
     }
   } else if (playerSelection === "Papel") {
-    if (computerSelection === "Piedra") {
-      result = "¡Ganaste!";
-      playerScore++;
+    if (computerSelection === "piedra") {
+      return "Gana! Papel Vence a piedra.";
     } else {
-      result = "!Pierdes!";
-      computerScore++
+      return "Pierde! Tijeras vence a papel.";
     }
   } else if (playerSelection === "Tijeras") {
-    if (computerSelection === "Papel") {
-      result = "¡Ganaste!";
-      playerScore++;
+    if (computerSelection === "papel") {
+      return "Gana! Tijeras vence a papel.";
     } else {
-      result = "!Pierdes!";
-      computerScore++
+      return "Pierde! Piedra vence a tijeras.";
     }
   } else {
-    result = "Selección inválida";
+    return "Selección inválida";
   }
-  return {result,playerScore, computerScore, totalDePuntos};
 }
 
 const botonRock = document.getElementById("rock");
 const botonPapel = document.getElementById("papel");
 const botonTijeras = document.getElementById("tijeras");
 const puntosText = document.getElementById("texto-inicio");
-const textoComputadora = document.getElementById("texto-computadora");
-const textoPlayer = document.getElementById("texto-player");
-
-const totalPuntos = document.getElementById("total-puntos")
-
-let round = 1;
 
 botonRock.addEventListener("click", function () {
-  if (round <= 10) {
-    const computerChoice = choiceComputer();
-    const { result} = playRound("Piedra", computerChoice);
-    puntosText.textContent = `${result}`;
-    textoComputadora.textContent = `Puntos Computadora = ${computerScore}`
-    textoPlayer.textContent = `Tus Puntos =  ${playerScore}`
-    round++;
-  } else {
-    puntosText.textContent = `Fin del juego.`;
-    round = 1;
-    playerScore = 0;
-    computerScore = 0;
-  }
+  const computerChoice = choiceComputer();
+  const result = playRound("Piedra", computerChoice);
+  const puntosText = document.querySelector("#puntos #texto-inicio");
+  puntosText.textContent = `Elegiste Piedra y la computadora eligió ${computerChoice}. ${result}`;
 });
 
 botonPapel.addEventListener("click", function () {
-  if (round <= 10) {
-    const computerChoice = choiceComputer();
-    const { result} = playRound("Papel", computerChoice);
-    puntosText.textContent = `${result}`;
-    textoComputadora.textContent = `Puntos Computadora = ${computerScore}`
-    textoPlayer.textContent = `Tus Puntos =  ${playerScore}`
-    round++;
-  } else {
-    puntosText.textContent = `Fin del juego.`;
-    round = 1;
-    playerScore = 0;
-    computerScore = 0;
-  }
+  const computerChoice = choiceComputer();
+  const result = playRound("Papel", computerChoice);
+  const puntosText = document.querySelector("#puntos #texto-inicio");
+  puntosText.textContent = `Elegiste Papel y la computadora eligió ${computerChoice}. ${result}`;
 });
 
 botonTijeras.addEventListener("click", function () {
-  if (round <= 10) {
-    const computerChoice = choiceComputer();
-    const { result} = playRound("Tijeras", computerChoice);
-    puntosText.textContent = `${result}`;
-    textoComputadora.textContent = `Puntos Computadora = ${computerScore}`
-    textoPlayer.textContent = `Tus Puntos =  ${playerScore}`
-    round++;
-  } else {
-    puntosText.textContent = `Fin del juego`;
-    round = 1;
-    playerScore = 0;
-    computerScore = 0;
-  }
+  const computerChoice = choiceComputer();
+  const result = playRound("Tijeras", computerChoice);
+  const puntosText = document.querySelector("#puntos #texto-inicio");
+  puntosText.textContent = `Elegiste Tijeras y la computadora eligió ${computerChoice}. ${result}`;
 });
-
-
-//const puntosText = document.querySelector("#puntos #texto-inicio");
 
 /*  function game() {
   let playerScore = 0;
