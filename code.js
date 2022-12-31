@@ -14,26 +14,26 @@ function playRound(playerSelection, computerSelection) {
     result = "Empate!🤨";
   } else if (playerSelection === "Piedra") {
     if (computerSelection === "Tijeras") {
-      result = "Gana! Piedra vence a Tijeras😁";
+      result = "Ganaste!😁";
       playerScore++;
     } else {
-      result = "Pierdes! Piedra vence a Tijeras😧";
+      result = "Pierdes!😧";
       computerScore++;
     }
   } else if (playerSelection === "Papel") {
     if (computerSelection === "Piedra") {
-      result = "Gana! Piedra vence a Tijeras😁";
+      result = "Ganaste!😁";
       playerScore++;
     } else {
-      result = "Pierdes! Piedra vence a Tijeras😧";
+      result = "Pierdes!😧";
       computerScore++;
     }
   } else if (playerSelection === "Tijeras") {
     if (computerSelection === "Papel") {
-      result = "Gana! Piedra vence a Tijeras😁";
+      result = "Ganaste!😁";
       playerScore++;
     } else {
-      result = "Pierdes! Piedra vence a Tijeras😧";
+      result = "Pierdes!😧";
       computerScore++;
     }
   } else {
@@ -48,7 +48,10 @@ const botonTijeras = document.getElementById("tijeras");
 const puntosText = document.getElementById("texto-inicio");
 const textoComputadora = document.getElementById("texto-computadora")
 const textoPlayer = document.getElementById("texto-player");
+const playAgainButton = document.getElementById("play-again");
 
+
+let gameInProgress = true;
 let round = 1;
 
 botonRock.addEventListener("click", function () {
@@ -64,6 +67,7 @@ botonRock.addEventListener("click", function () {
     round = 1;
     playerScore = 0;
     computerScore = 0
+    playAgainButton.style.display = "block";
   }
 });
 
@@ -98,6 +102,7 @@ botonTijeras.addEventListener("click", function () {
     computerScore = 0
   }
 });
+
 
 /*  function game() {
   let playerScore = 0;

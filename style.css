@@ -12,11 +12,11 @@ body{
 
 
 .container{
-    max-width: 450px;
+    max-width: 440px;
     height: 100vh;
     margin: 0 auto;
-    max-height: 745px;
-    background-color: rgb(216, 74, 74);
+    max-height: 740px;
+    background-color: rgb(213, 68, 68);
     border: 5px solid black;
     border-radius: 11px;
     display: flex;
@@ -34,21 +34,34 @@ body{
 #rock,
 #papel,
 #tijeras{
-    font-size: 30px;
-    background-color: white;
+    font-size: 35px;
+    background-color: rgb(255, 227, 227);
     font-family:monospace;
-    border-radius: 8px;
+    border-radius: 5px;
+    width: 100%;
+    
 }
 
 #botones,
 button,
-img{
+img
+{
     width: 100%;
     background-color: transparent;
     border-color: none;
+    height: 65px;
     
 }
+button:hover{
+ transform: scale(1.1);
+ color: rgb(209, 48, 48);
+}
 
+#play-again{
+    display: none;
+
+    
+}
 h1{
     text-align: center;
     font-size: 35px;
@@ -89,6 +102,12 @@ body{
 #puntos-total{
     font-size: 20px;
 }
+
+.elemento-encima-del-footer {
+    margin-bottom: 100px; /* Altura del footer */
+  }
+
+
 /* @keyframes solo{
 
 	  0%{
