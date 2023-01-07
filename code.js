@@ -48,7 +48,7 @@ const botonTijeras = document.getElementById("tijeras");
 const puntosText = document.getElementById("texto-inicio");
 const textoComputadora = document.getElementById("texto-computadora")
 const textoPlayer = document.getElementById("texto-player");
-const playAgainButton = document.getElementById("play-again");
+//const playAgainButton = document.getElementById("play-again");
 
 
 let gameInProgress = true;

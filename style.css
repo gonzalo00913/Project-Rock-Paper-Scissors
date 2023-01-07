@@ -35,21 +35,21 @@ body{
 #papel,
 #tijeras{
     font-size: 35px;
-    background-color: rgb(255, 227, 227);
+    background-color: transparent;
     font-family:monospace;
-    border-radius: 5px;
+    border:none;
     width: 100%;
     
 }
 
 #botones,
-button,
 img
 {
     width: 100%;
     background-color: transparent;
     border-color: none;
-    height: 65px;
+    height: 122px;
+    margin-bottom: 20px
     
 }
 button:hover{
